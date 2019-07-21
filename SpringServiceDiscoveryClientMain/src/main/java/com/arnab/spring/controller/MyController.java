@@ -27,4 +27,9 @@ public class MyController {
 		return service.getHelloService2();
 	}
 	
+	@GetMapping(value = "/metadata")
+	public String getMetaData() {
+		return service.getServices();
+	}
+	
 }

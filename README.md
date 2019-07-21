@@ -171,3 +171,9 @@ public class MyService {
 	
 }
 -> You just hit this application's controller and you can see the response is coming from the registered applications.
+
+
+Another thing - 
+When you want to view the details of the service discovery, just create an instance of DiscoveryClient with @Autowired annotation. And check the methods inside that object to get the details about the service discovery, like the list of services, the order of services, the description, etc.
+
+Also every Eureka Client applications send heart-beat to the Eureka Server after some time intervals. This indicate that the clients are still alive and if a client stops sending heart-beat, that means the client is dead and no longer available at that address or URL. Then the Eureka server de-register the service.
